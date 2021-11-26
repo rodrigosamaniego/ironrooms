@@ -9,10 +9,11 @@ router.get("/", indexController.home)
 //Mostar formulario
 router.get("/signup", indexController.viewRegister)
 //enviar datos a BD
-// router.post("/signup", indexController.register)
+router.post("/signup", indexController.register)
 
 //mostrar login
 router.get("/login", indexController.viewLogin )
+router.post("/login", indexController.login )
 
 
 

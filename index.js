@@ -16,6 +16,8 @@ app.set("view engine", "hbs")
 
 hbs.registerPartials(__dirname + "/views/partials")
 
+app.use(express.urlencoded({ extended: true }))
+
 connectDB()
 
 // 3. RUTAS
