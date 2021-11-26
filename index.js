@@ -32,6 +32,7 @@ app.use("/", require("./routes/index"))
 app.use("/signup", require("./routes/index"))
 app.use("/login", require("./routes/index"))
 app.use("/users", require("./routes/users"))
+app.use("/rooms", require("./routes/rooms"))
 
 
 
