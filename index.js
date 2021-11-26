@@ -20,6 +20,7 @@ connectDB()
 
 // 3. RUTAS
 app.use("/", require("./routes/index"))
+app.use("/signup", require("./routes/index"))
 
 
 
