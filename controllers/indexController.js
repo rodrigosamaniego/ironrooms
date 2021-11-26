@@ -76,9 +76,25 @@ exports.login = async (req, res) => {
             })
             return
         }
-        res.redirect("/")
+        req.session.currentUser = {
+            _id: foundUser._id,
+            email: foundUser.email,
+           
+        }
+
+        res.redirect("/users/profile")
     
     }catch (error) {
         console.log(error)
     }
+}
+
+exports.logout = async (req, res) => {
+    req.session.destroy((error) =>{
+        if(error){
+            console.log(error)
+            return
+        }
+        res.redirect("/")
+    })
 }
